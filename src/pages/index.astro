@@ -1,0 +1,601 @@
+---
+// Halaman Astro ini menggunakan markup HTML asli tanpa perubahan.
+---
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anaboo - Penitipan & Perawatan Hewan Peliharaan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="logo-anaboo-horizontal.svg
+        " alt="Anaboo Logo" class="logo-img" />
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <a href="#beranda">Home</a>
+        <a href="#tentang">About Us</a>
+        <a href="#produk">Layanan Jasa</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <a href="https://wa.me/6285691544401" class="btn btn-wa navbar-wa" target="_blank">
+        Chat WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="beranda">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-tag">🐾 Penitipan & Perawatan Hewan Terpercaya</p>
+          <h1>Ana<span class="highlight">boo</span></h1>
+          <p class="subtitle">
+            Anaboo adalah layanan penitipan dan perawatan hewan peliharaan yang aman, nyaman, dan terpercaya.
+            Kami membantu pemilik hewan yang sibuk atau sedang bepergian agar anabul tetap dirawat dengan penuh kasih.
+          </p>
+          <div class="hero-buttons">
+            <a href="#tentang" class="btn btn-outline">Read More</a>
+          </div>
+        </div>
+        <img src="hero-anaboo.png" alt="Anaboo" class="hero-banner" />
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <strong>300+</strong>
+          <span>Hewan Peliharaan Dirawat</span>
+        </div>
+        <div class="stat-item">
+          <strong>3+</strong>
+          <span>Tahun Berpengalaman</span>
+        </div>
+        <div class="stat-item">
+          <strong>98%</strong>
+          <span>Pelanggan Puas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="about" id="tentang">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-text">
+          <p class="about-tag-chip">✨ Tentang Kami</p>
+          <h2 class="about-title">Kami Peduli<br><span class="highlight">Anabul Kamu 🐾</span></h2>
+          <p class="about-description">
+            Anaboo telah berdiri sejak Februari 2022 sebagai layanan penitipan dan perawatan hewan peliharaan
+            yang aman, nyaman, dan terpercaya. Kami hadir untuk membantu para pemilik hewan yang memiliki
+            kesibukan tinggi atau sedang bepergian.
+          </p>
+          <p class="about-description">
+            Melalui website ini, pelanggan dapat dengan mudah memesan berbagai layanan perawatan hewan—datang
+            langsung ke tempat kami, atau panggil ke rumah bagi yang ingin anabul dirawat tanpa keluar rumah.
+            Dengan mengutamakan kebersihan, keamanan, dan kasih sayang, Anaboo berkomitmen memberikan pengalaman
+            terbaik.
+          </p>
+          <div class="about-chips">
+            <span class="chip" onclick="bukaModalLayanan('pethotel')">🏨 Pet Hotel</span>
+            <span class="chip" onclick="bukaModalLayanan('grooming')">✂️ Grooming</span>
+            <span class="chip" onclick="bukaModalLayanan('dailycare')">🌟 Daily Care</span>
+          </div>
+        </div>
+
+        <div class="about-images">
+          <img src="foto-about-main.jpg" alt="Anaboo" class="img-main" />
+          <div class="experience-badge">
+            <strong>2022</strong>
+            <span>Berdiri Sejak</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN JASA -->
+  <section class="products" id="produk">
+    <div class="container">
+
+      <p class="section-tag">Pilihan Layanan</p>
+      <h2 class="section-title">Layanan Jasa yang Ditawarkan</h2>
+      <p class="section-subtitle">Pilih layanan terbaik untuk anabul kesayanganmu.</p>
+
+      <div class="product-grid">
+
+        <!-- Kartu: Pet Hotel -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="foto-pet-hotel.jpg" alt="Pet Hotel" class="product-img" />
+            <div class="product-badge">Populer</div>
+          </div>
+          <div class="product-info">
+            <h3>🏨 Pet Hotel</h3>
+            <p>Penitipan hewan peliharaan dengan fasilitas aman, bersih, nyaman, dan pengawasan penuh 24 jam.</p>
+            <div class="product-footer">
+              <a href="#" class="btn-detail" onclick="bukaModalLayanan('pethotel'); return false;">Lihat Detail</a>
+              <a href="#" class="btn-order" onclick="bukaModalHarga('pethotel'); return false;">Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu: Grooming -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="foto-grooming.jpg" alt="Grooming" class="product-img" />
+            <div class="product-badge">Favorit</div>
+          </div>
+          <div class="product-info">
+            <h3>✂️ Grooming</h3>
+            <p>Perawatan kebersihan seperti mandi, potong kuku, dan perawatan bulu agar anabul sehat & wangi.</p>
+            <div class="product-footer">
+              <a href="#" class="btn-detail" onclick="bukaModalLayanan('grooming'); return false;">Lihat Detail</a>
+              <a href="#" class="btn-order" onclick="bukaModalHarga('grooming'); return false;">Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu: Daily Care -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="foto-daily-care.jpg" alt="Daily Care" class="product-img" />
+            <div class="product-badge new">Baru</div>
+          </div>
+          <div class="product-info">
+            <h3>🌟 Daily Care</h3>
+            <p>Layanan perawatan harian: pemberian makan, bermain, dan pemantauan kondisi hewan penuh perhatian.</p>
+            <div class="product-footer">
+              <a href="#" class="btn-detail" onclick="bukaModalLayanan('dailycare'); return false;">Lihat Detail</a>
+              <a href="#" class="btn-order" onclick="bukaModalHarga('dailycare'); return false;">Harga</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section class="testimonials" id="testimoni">
+    <div class="container">
+
+      <p class="section-tag">Ulasan Pelanggan</p>
+      <h2 class="section-title">Kata Mereka Tentang Anaboo</h2>
+      <p class="section-subtitle">Kepercayaan Anda adalah kebanggaan kami.</p>
+
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            "Kucing pacar aku di sini happy banget, mbak-mbaknya suka ajak main anakkuuuuu huhu loveeee."
+          </blockquote>
+          <div class="reviewer-info">
+            <div class="avatar"><span>A</span></div>
+            <div>
+              <div class="reviewer-name">Acil</div>
+              <div class="reviewer-title">Pelanggan sejak 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            "honest review, mas yang dateng ke rumah buat grooming si meng sabar banget, padahal si
+            meng udah kayak reog alias gak bisa diem BANGET :) thank youuu mas dan anaboo, pelayanannya
+            selalu memuaskan."
+          </blockquote>
+          <div class="reviewer-info">
+            <div class="avatar">S</div>
+            <div>
+              <div class="reviewer-name">Sajiw</div>
+              <div class="reviewer-title">Pelanggan sejak 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            "aku nitipin losi di anaboo selama aku pergi ke jepun, tiap 4j sekali di whatsapp sama staffnya
+            buat ngasih tau kabarnya losi, buat ngasih tau kalau losi udah dikasih cemilan atau makanan.
+            highly recommended. W anaboo!"
+          </blockquote>
+          <div class="reviewer-info">
+            <div class="avatar">W</div>
+            <div>
+              <div class="reviewer-name">Windut</div>
+              <div class="reviewer-title">Pelanggan sejak 2025</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CARA PESAN -->
+  <section class="how-to-order" id="cara-order">
+    <div class="container">
+
+      <p class="section-tag">Cara Pesan</p>
+      <h2 class="section-title">Pesan Layanan dalam 3 Langkah</h2>
+      <p class="section-subtitle">Mudah, cepat, dan langsung terhubung ke tim Anaboo!</p>
+
+      <div class="steps-grid">
+
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3>Chat via WhatsApp</h3>
+          <p>Hubungi kami di WhatsApp dan ceritakan kebutuhan hewan peliharaan Anda.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Pilih Jadwal & Layanan</h3>
+          <p>Tentukan tanggal, jenis layanan, dan detail hewan peliharaan Anda bersama tim kami.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Anabul Dirawat!</h3>
+          <p>Serahkan anabul Anda kepada kami. Kami akan merawatnya dengan penuh kasih sayang.</p>
+        </div>
+
+      </div>
+
+      <div class="order-cta">
+        <a href="https://wa.me/6285691544401?text=Halo%20Anaboo%2C%20saya%20ingin%20memesan%20layanan!" class="btn btn-wa btn-large" target="_blank">
+          Pesan Sekarang via WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section class="contact" id="kontak">
+    <div class="container">
+
+      <p class="section-tag">Hubungi Kami</p>
+      <h2 class="section-title">Ada Pertanyaan?</h2>
+      <p class="section-subtitle">
+        Konsultasikan kebutuhan hewan peliharaan Anda bersama tim Anaboo. Kami siap membantu!
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/6285691544401" target="_blank">+62 856-9154-4401</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <div>
+              <strong>Instagram</strong>
+              <a href="https://instagram.com/anaboo.id" target="_blank">@anaboo.id</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <strong>Alamat</strong>
+              <span>Jl. Radio Dalam Raya No.84, Gandaria Utara, Kebayoran Baru, Jakarta Selatan</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>Jam Operasional</strong>
+              <span>Setiap Hari: 08.00 – 22.00 WIB</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 8px;">
+            <a href="https://wa.me/6285691544401?text=Halo%20Anaboo%2C%20saya%20ingin%20konsultasi%20layanan!" class="btn btn-wa" target="_blank" style="display:inline-block;">
+              Chat via WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+        <div class="contact-map">
+          <p class="map-title">📍 Temukan Kami di Google Maps</p>
+          <iframe
+            src="https://www.google.com/maps?q=Pet+Avenue+by+Petshop+Indonesia,+Jl.+Radio+Dalam+Raya+No.84,+Jakarta+Selatan&output=embed"
+            width="100%"
+            height="280"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+
+      <p class="section-tag">Pertanyaan Umum</p>
+      <h2 class="section-title">FAQ Seputar Anaboo</h2>
+      <p class="section-subtitle">Beberapa hal yang paling sering ditanyakan pelanggan kami.</p>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Apa saja yang perlu dibawa saat menitipkan hewan peliharaan?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Cukup bawa makanan favorit hewan Anda (jika ada kebutuhan khusus), obat-obatan bila sedang dalam
+            perawatan, serta buku vaksin. Kandang dan perlengkapan dasar sudah kami sediakan.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Apakah hewan yang belum divaksin lengkap boleh dititipkan?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Untuk keamanan seluruh anabul di Anaboo, kami mewajibkan minimal vaksinasi dasar. Konsultasikan
+            kondisi hewan Anda ke tim kami via WhatsApp sebelum melakukan booking.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Bagaimana cara memantau kondisi hewan selama dititipkan?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Tim kami mengirimkan update foto dan laporan kondisi hewan secara berkala melalui WhatsApp,
+            sehingga Anda tetap bisa memantau anabul meski sedang bepergian.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Apakah bisa membatalkan atau mengubah jadwal setelah booking?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Bisa. Hubungi tim Anaboo via WhatsApp minimal 1 hari sebelum jadwal untuk perubahan atau
+            pembatalan agar kami dapat menyesuaikan ketersediaan.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <p class="footer-brand">🐾 Anaboo</p>
+          <p class="footer-tagline">Penitipan & perawatan hewan peliharaan yang aman, nyaman, dan terpercaya.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#beranda">Home</a>
+          <a href="#tentang">About Us</a>
+          <a href="#produk">Layanan Jasa</a>
+          <a href="#kontak">Kontak</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://wa.me/6285691544401" target="_blank">WhatsApp</a>
+          <a href="https://instagram.com/anaboo.id" target="_blank">Instagram @anaboo.id</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Anaboo. Disusun oleh Putri Nabiilah (24110310063).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Gambar Biasa -->
+  <div id="modalGambar" class="modal" onclick="tutupModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="imgModal">
+  </div>
+
+  <!-- Modal Harga -->
+  <div id="modalHarga" class="modal modal-layanan" onclick="tutupModalHarga(event)">
+    <div class="modal-layanan-box" onclick="event.stopPropagation()">
+      <button class="modal-layanan-close" onclick="tutupModalHarga(event)">&times;</button>
+      <div id="modalHargaKonten"></div>
+    </div>
+  </div>
+
+  <!-- Modal Layanan Detail -->
+  <div id="modalLayanan" class="modal modal-layanan" onclick="tutupModalLayanan(event)">
+    <div class="modal-layanan-box" onclick="event.stopPropagation()">
+      <button class="modal-layanan-close" onclick="tutupModalLayanan(event)">&times;</button>
+      <div id="modalLayananKonten"></div>
+    </div>
+  </div>
+
+  <script is:inline>
+    function bukaModal(src) {
+      document.getElementById("modalGambar").style.display = "flex";
+      document.getElementById("imgModal").src = src;
+    }
+    function tutupModal() {
+      document.getElementById("modalGambar").style.display = "none";
+    }
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("menu-toggle").checked = false;
+      });
+    });
+
+    const dataLayanan = {
+      pethotel: {
+        judul: "🏨 Pet Hotel",
+        deskripsi: "Layanan penitipan hewan peliharaan dengan fasilitas yang aman, bersih, dan nyaman serta pengawasan penuh selama 24 jam. Kami memastikan setiap hewan mendapat perhatian, kasih sayang, dan lingkungan yang menyenangkan selama ditinggal pemiliknya.",
+        fitur: ["Kandang bersih & nyaman", "Pengawasan 24 jam", "Laporan kondisi hewan", "Tersedia untuk kucing, anjing, kelinci & hamster"],
+        harga: [
+          { paket: "1 Hari / 1 Malam", harga: "Rp 80.000" },
+          { paket: "3 Hari / 2 Malam", harga: "Rp 210.000" },
+          { paket: "7 Hari / 6 Malam", harga: "Rp 490.000" }
+        ],
+        foto: ["foto-pet-hotel1.jpg", "foto-pet-hotel2.jpg", "foto-pet-hotel3.jpg"]
+      },
+      grooming: {
+        judul: "✂️ Grooming",
+        deskripsi: "Perawatan kebersihan lengkap seperti mandi, potong kuku, pembersihan telinga, dan perawatan bulu agar anabul tetap sehat, rapi, dan wangi. Dilakukan oleh groomer berpengalaman yang sayang hewan.",
+        fitur: ["Mandi & blow dry", "Potong kuku", "Bersih telinga", "Potong & rapikan bulu"],
+        harga: [
+          { paket: "Basic Grooming", harga: "Rp 70.000" },
+          { paket: "Complete Grooming", harga: "Rp 120.000" },
+          { paket: "Flea Treatment", harga: "Rp 150.000" }
+        ],
+        foto: ["foto-grooming1.jpg", "foto-grooming2.jpg", "foto-grooming3.jpg"]
+      },
+      dailycare: {
+        judul: "🌟 Daily Care",
+        deskripsi: "Layanan perawatan harian yang mencakup pemberian makan sesuai jadwal, sesi bermain, dan pemantauan kondisi kesehatan hewan dengan penuh perhatian. Cocok untuk hewan yang butuh perhatian rutin setiap hari.",
+        fitur: ["Pemberian makan & minum", "Sesi bermain & interaksi", "Pemantauan kondisi kesehatan", "Update foto & laporan harian"],
+        harga: [
+          { paket: "Half Day (6 jam)", harga: "Rp 35.000" },
+          { paket: "Full Day (12 jam)", harga: "Rp 55.000" }
+        ],
+        foto: ["foto-daily-care1.jpg", "foto-daily-care2.jpg", "foto-daily-care3.jpg"]
+      }
+    };
+
+    function bukaModalLayanan(id) {
+      const data = dataLayanan[id];
+      if (!data) return;
+      const fotoHTML = data.foto.map(f =>
+        `<img src="${f}" alt="${data.judul}" class="modal-layanan-foto" onclick="bukaModal(this.src)">`
+      ).join('');
+      const fiturHTML = data.fitur.map(f => `<li>✓ ${f}</li>`).join('');
+      document.getElementById("modalLayananKonten").innerHTML = `
+        <h2 class="modal-layanan-judul">${data.judul}</h2>
+        <p class="modal-layanan-desc">${data.deskripsi}</p>
+        <ul class="modal-layanan-fitur">${fiturHTML}</ul>
+        <div class="modal-layanan-galeri">${fotoHTML}</div>
+        <a href="https://wa.me/6285691544401?text=Halo%20Anaboo%2C%20saya%20ingin%20tanya%20tentang%20${encodeURIComponent(data.judul.replace(/[^\w\s]/gi, '').trim())}!"
+          class="btn btn-wa" target="_blank" style="margin-top:16px; display:inline-block;">
+          Pesan via WhatsApp
+        </a>
+      `;
+      document.getElementById("modalLayanan").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function tutupModalLayanan(e) {
+      document.getElementById("modalLayanan").style.display = "none";
+      document.body.style.overflow = "";
+    }
+
+    function bukaModalHarga(id) {
+      const data = dataLayanan[id];
+      if (!data) return;
+      const hargaHTML = data.harga.map(h => `
+        <div class="harga-row">
+          <span class="harga-paket">${h.paket}</span>
+          <span class="harga-nominal">${h.harga}</span>
+        </div>
+      `).join('');
+      document.getElementById("modalHargaKonten").innerHTML = `
+        <h2 class="modal-layanan-judul">${data.judul} — Daftar Harga</h2>
+        <div class="harga-box">
+          ${hargaHTML}
+        </div>
+        <a href="https://wa.me/6285691544401?text=Halo%20Anaboo%2C%20saya%20ingin%20pesan%20${encodeURIComponent(data.judul.replace(/[^\w\s]/gi, '').trim())}!"
+          class="btn btn-wa" target="_blank" style="margin-top:16px; display:inline-block;">
+          Pesan via WhatsApp
+        </a>
+      `;
+      document.getElementById("modalHarga").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function tutupModalHarga(e) {
+      document.getElementById("modalHarga").style.display = "none";
+      document.body.style.overflow = "";
+    }
+  </script>
+
+</body>
+</html>
