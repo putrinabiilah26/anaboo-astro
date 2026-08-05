@@ -1032,6 +1032,10 @@ img {
 
 @media (max-width: 900px) {
 
+  .navbar-wa {
+    display: none;
+  }
+
   .hamburger {
     display: flex;
   }
