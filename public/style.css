@@ -1169,6 +1169,8 @@ img {
   .experience-badge {
     left: -5px;
     top: 20px;
+    right: auto;
+    bottom: auto;
     padding: 12px 16px;
   }
 
